@@ -1,51 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>NextTechh</title>
+<title>NextTechh</title>
+
+<script>
+function trocarImagem(id, nova) {
+    document.getElementById(id).src = nova;
+}
+</script>
+
 </head>
 
-<body style="font-family: Arial; text-align: center; background-color: #f5f5f5;">
+<body style="font-family: Arial; text-align: center; background: #f5f5f5;">
 
-    <!-- LOGO / NOME -->
-    <h1 style="background: black; color: white; padding: 15px;">
-        NextTechh 🚀
-    </h1>
+<h1 style="background: black; color: white; padding: 15px;">
+NextTechh 🚀
+</h1>
 
-    <!-- PRODUTO 1 -->
-    <div style="background: white; margin: 20px; padding: 20px; border-radius: 10px;">
-        <h2>Fone Bluetooth Básico</h2>
+<!-- PRODUTO 1 -->
+<div style="background: white; margin: 20px; padding: 20px; border-radius: 10px;">
 
-        <img src="1.jpg" width="250"><br><br>
-        <img src="2.jpg" width="250">
+<h2>Fone Bluetooth Básico</h2>
 
-        <p>✔ Som limpo</p>
-        <p>✔ Conexão rápida</p>
-        <p>✔ Ótimo custo-benefício</p>
+<img id="img1" src="1.jpg" width="250"><br><br>
 
-        <h2 style="color: green;">R$ 59,90</h2>
+<img src="1.jpg" width="60" onclick="trocarImagem('img1','1.jpg')">
+<img src="2.jpg" width="60" onclick="trocarImagem('img1','2.jpg')">
 
-        <a href="https://wa.me/5547988249632">
-            <button style="padding: 10px 20px;">Comprar</button>
-        </a>
-    </div>
+<p>✔ Som limpo</p>
+<p>✔ Conexão rápida</p>
+<p>✔ Ótimo custo-benefício</p>
 
-    <!-- PRODUTO 2 -->
-    <div style="background: white; margin: 20px; padding: 20px; border-radius: 10px;">
-        <h2>Fone Bluetooth Premium 🔥</h2>
+<h2 style="color: green;">R$ 59,90</h2>
 
-        <img src="3.jpg" width="250"><br><br>
-        <img src="5.jpg" width="250">
+<a href="https://wa.me/SEUNUMERO">
+<button style="padding: 10px 20px;">Comprar</button>
+</a>
 
-        <p>✔ Som potente</p>
-        <p>✔ Grave forte</p>
-        <p>✔ Bateria longa</p>
+</div>
 
-        <h2 style="color: green;">R$ 99,90</h2>
+<!-- PRODUTO 2 -->
+<div style="background: white; margin: 20px; padding: 20px; border-radius: 10px;">
 
-        <a href="https://wa.me/5547988249632">
-            <button style="padding: 10px 20px;">Comprar</button>
-        </a>
-    </div>
+<h2>Fone Bluetooth Premium 🔥</h2>
+
+<img id="img2" src="3.jpg" width="250"><br><br>
+
+<img src="3.jpg" width="60" onclick="trocarImagem('img2','3.jpg')">
+<img src="5.jpg" width="60" onclick="trocarImagem('img2','5.jpg')">
+
+<p>✔ Som potente</p>
+<p>✔ Grave forte</p>
+<p>✔ Bateria longa</p>
+
+<h2 style="color: green;">R$ 99,90</h2>
+
+<a href="https://wa.me/SEUNUMERO">
+<button style="padding: 10px 20px;">Comprar</button>
+</a>
+
+</div>
 
 </body>
 </html>
