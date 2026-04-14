@@ -9,6 +9,11 @@
 function trocarImagem(id, nova) {
     document.getElementById(id).src = nova;
 }
+
+function abrirZoom(src){
+document.getElementById('zoom').style.display='flex';
+document.getElementById('zoom-img').src=src;
+}
 </script>
 
 <style>
@@ -31,12 +36,14 @@ NextTechh 🚀
 
 <h2 style="font-size: 20px;">Fone Bluetooth Básico</h2>
 
-<img id="img1" src="13.jpeg" style="width: 100%; max-width: 250px; border-radius: 10px;"><br><br>
+<img id="img1" src="13.jpeg" 
+style="width: 100%; max-width: 250px; border-radius: 10px; cursor:pointer;"
+onclick="abrirZoom(this.src)"><br><br>
 
-<img src="13.jpeg" style="width: 60px;" onclick="trocarImagem('img1','5.webp')">
-<img src="11.jpeg" style="width: 60px;" onclick="trocarImagem('img1','6.webp')">
-<img src="12.jpeg" style="width: 60px;" onclick="trocarImagem('img1','7.webp')">
-<img src="14.jpeg" style="width: 60px;" onclick="trocarImagem('img1','8.webp')">
+<img src="13.jpeg" style="width: 60px; margin:5px;" onclick="trocarImagem('img1','13.jpeg')">
+<img src="11.jpeg" style="width: 60px; margin:5px;" onclick="trocarImagem('img1','11.jpeg')">
+<img src="12.jpeg" style="width: 60px; margin:5px;" onclick="trocarImagem('img1','12.jpeg')">
+<img src="14.jpeg" style="width: 60px; margin:5px;" onclick="trocarImagem('img1','14.jpeg')">
 
 <p>✔ Som limpo</p>
 <p>✔ Conexão rápida</p>
@@ -81,15 +88,17 @@ margin-bottom: 10px;
 
 <h2 style="font-size: 20px;">Fone Bluetooth Premium 🔥</h2>
 
-<img id="img2" src="21.jpeg" style="width: 100%; max-width: 250px; border-radius: 10px;"><br><br>
+<img id="img2" src="21.jpeg" 
+style="width: 100%; max-width: 250px; border-radius: 10px; cursor:pointer;"
+onclick="abrirZoom(this.src)"><br><br>
 
-<img src="28.jpeg" style="width: 60px;" onclick="trocarImagem('img2','1.webp')">
-<img src="27.jpeg" style="width: 60px;" onclick="trocarImagem('img2','2.webp')">
-<img src="26.jpeg" style="width: 60px;" onclick="trocarImagem('img2','3.webp')">
-<img src="22.jpeg" style="width: 60px;" onclick="trocarImagem('img2','4.webp')">
-<img src="21.jpeg" style="width: 60px;" onclick="trocarImagem('img2','4.webp')">
-<img src="24.jpeg" style="width: 60px;" onclick="trocarImagem('img2','4.webp')">
-<img src="25.jpeg" style="width: 60px;" onclick="trocarImagem('img2','4.webp')">
+<img src="28.jpeg" style="width: 60px; margin:5px;" onclick="trocarImagem('img2','28.jpeg')">
+<img src="27.jpeg" style="width: 60px; margin:5px;" onclick="trocarImagem('img2','27.jpeg')">
+<img src="26.jpeg" style="width: 60px; margin:5px;" onclick="trocarImagem('img2','26.jpeg')">
+<img src="22.jpeg" style="width: 60px; margin:5px;" onclick="trocarImagem('img2','22.jpeg')">
+<img src="21.jpeg" style="width: 60px; margin:5px;" onclick="trocarImagem('img2','21.jpeg')">
+<img src="24.jpeg" style="width: 60px; margin:5px;" onclick="trocarImagem('img2','24.jpeg')">
+<img src="25.jpeg" style="width: 60px; margin:5px;" onclick="trocarImagem('img2','25.jpeg')">
 
 <p>✔ Som potente</p>
 <p>✔ Grave forte</p>
@@ -117,7 +126,23 @@ transition: 0.3s;
 
 </div>
 
-<!-- BOTÃO FIXO WHATSAPP -->
+<!-- ZOOM -->
+<div id="zoom" onclick="this.style.display='none'" style="
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+justify-content:center;
+align-items:center;
+z-index:1000;
+">
+<img id="zoom-img" style="max-width:90%; max-height:90%; border-radius:10px;">
+</div>
+
+<!-- BOTÃO FIXO -->
 <a href="https://wa.me/5547988249632?text=Olá%20vim%20pelo%20site%20NextTechh" 
 style="
 position: fixed;
